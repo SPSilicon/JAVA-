@@ -70,10 +70,15 @@ public class Calculator extends JFrame{
 									operator = command;
 							} else { // 숫자 다음에 operator가 오므로 계산을 수행합니다.
 								double x = Double.parseDouble(display.getText());
-								 if(command.equals("sqrt")||command.equals("1/x"))
+								 if(command.equals("sqrt"))
 								 {
-									 operator = command;
-									 calculate(x);
+									 display.setText(Math.sqrt(x)+"");
+									 return;
+								 }
+								 else if(command.equals("1/x"))
+								 {
+									 display.setText((1/x)+"");
+									 return;
 								 }
 								 else
 								 {
@@ -109,12 +114,8 @@ public class Calculator extends JFrame{
 			result /= n;
 		else if (operator.equals("="))
 			result = n;
-		else if (operator.equals("1/x"))
-			result = 1/n;
 		else if (operator.equals("-/+"))
 			result = -n;
-		else if (operator.equals("sqrt"))
-			result = Math.sqrt(n);
 		else if (operator.equals("%"))
 			result %= n; 
 		display.setText("" + result);
@@ -125,4 +126,3 @@ public class Calculator extends JFrame{
 			Calculator cal = new Calculator();
 	}
 }
-
