@@ -5,6 +5,7 @@ import java.util.Stack;
 import javax.swing.*;
 
 public class Calculator extends JFrame{
+		// 코멘트당~~
 	private JPanel panel;
 	private JTextField display;
 	private JButton[] buttons;
